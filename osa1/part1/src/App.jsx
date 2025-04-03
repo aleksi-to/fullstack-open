@@ -13,6 +13,10 @@ const App = () => {
   const increaseNeutral = () => setNeutral(neutral + 1);
   const increaseBad = () => setBad(bad + 1);
 
+  const increaseKakka = (props) => {
+    return props.setValue(props.value);
+  };
+
   return (
     <>
       <h1>give feedback</h1>
