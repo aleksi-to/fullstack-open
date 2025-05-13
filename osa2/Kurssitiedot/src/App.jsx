@@ -31,12 +31,22 @@ const App = () => {
         exercises: 14,
         id: 3,
       },
+      {
+        name: "Redux",
+        exercises: 11,
+        id: 4,
+      },
     ],
   };
-
+  const luvut = course.parts.map((part) => part.exercises);
+  const summa = luvut.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0,
+  );
   return (
     <div>
-	<Course course={course} />
+      <Course course={course} />
+      <b>total of {summa} exercises</b>
     </div>
   );
 };
