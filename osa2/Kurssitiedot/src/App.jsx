@@ -39,7 +39,7 @@ const App = () => {
     ],
   };
     
-  #TODO toteuta summa ilman luvut-muuttujaa  
+  // TODO toteuta summa ilman luvut-muuttujaa  
   const luvut = course.parts.map((part) => part.exercises);
   const summa = luvut.reduce(
     (accumulator, currentValue) => accumulator + currentValue,
