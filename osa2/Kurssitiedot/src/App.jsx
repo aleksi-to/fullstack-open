@@ -1,4 +1,15 @@
-const Course = ({ course }) => <div></div>;
+const Course = ({ course }) => (
+  <div>
+    <h1>{course.name}</h1>
+    <ul>
+      {course.parts.map((part) => (
+        <li key={part.id}>
+          {part.name} {part.exercises}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
 const App = () => {
   const course = {
@@ -25,7 +36,7 @@ const App = () => {
 
   return (
     <div>
-      <Course course={course} />
+	<Course course={course} />
     </div>
   );
 };
